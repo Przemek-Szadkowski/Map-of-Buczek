@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Mapa miejscowości Buczek na której możesz odnaleźć wszystkie ulice i budynki użyteczności publicznej">
+    <meta name='keywords' content='Buczek, "mapa Buczku" , "ulice w Buczku", "urząd gminy Buczek", truskawka'>
+    <title>Odnajdź się w Buczku!</title>
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="clearfix">
+        <img src="img/logo.png" alt="Logo gminy Buczek">
+        <!-- <p>Odnajdź się w Buczku!</p> -->
+        <h1><span>O</span><span>d</span><span>n</span><span>a</span><span>j</span><span>d</span><span>ź</span> <span>s</span><span>i</span><span>ę</span>
+            <span>w</span> <span>B</span><span>u</span><span>c</span><span>z</span><span>k</span><span>u</span><span>!</span></h1>
+    </header>
+    <main class="clearfix">
+        <div class="buttons">
+            <p>Nazwy ulic</p>
+            <button class="ulbrojsce button mainmap">Brojsce</button>
+            <button class="ulcicha button mainmap">Cicha</button>
+            <button class="uldebowa button mainmap">Dębowa</button>
+            <button class="ulglowna button mainmap">Główna</button>
+            <button class="ulgorna button mainmap">Górna</button>
+            <button class="ulkrotka button mainmap">Krótka</button>
+            <button class="ullgow button">Lgów</button>
+            <button class="ullipowa button mainmap">Lipowa</button>
+            <button class="ullakowa button mainmap">Łąkowa</button>
+            <button class="ulmodrzewiowa button mainmap">Modrzewiowa</button>
+            <button class="ulosiedle button mainmap">Os. Młodych</button>
+            <button class="ulparcela button mainmap">Parcela</button>
+            <button class="ulparkowa button mainmap">Parkowa</button>
+            <button class="ulpienki button mainmap">Pieńki</button>
+            <button class="ulpoludniowa button mainmap">Południowa</button>
+            <button class="ulpoprzeczna button mainmap">Poprzeczna</button>
+            <button class="ulprosta button mainmap">Prosta</button>
+            <button class="ulsloneczna button mainmap">Słoneczna</button>
+            <button class="ulspacerowa button mainmap">Spacerowa</button>
+            <button class="ulspokojna button mainmap">Spokojna</button>
+            <button class="ulspoldzielcza button mainmap">Spółdzielcza</button>
+            <button class="ulszadek button">Szadek</button>
+            <button class="ulszkolna button mainmap">Szkolna</button>
+            <button class="ultopolowa button mainmap">Topolowa</button>
+            <button class="ulwaska button mainmap">Wąska</button>
+            <button class="ulwschodnia button mainmap">Wschodnia</button>
+            <button class="ulwygwizdow button">Wygwizdów</button>
+            <button class="ulzielona button mainmap">Zielona</button>
+            <button class="clear">Wyczyść</button>
+        </div>
+        <div class="map">
+            <div class="white">
+                <img class="mapofBuczek" src="img/mapadruga.png" alt="Mapa Buczku">
+            </div>
+            <div class="north">
+                <img class="mapnorth" src="img/Szadek_wygwizdow.png" alt="Mapa północnej części Buczku">
+                <img class="szadek street" src="img/szadek.png" alt="ulica szadek">
+                <img class="wygwizdow street" src="img/wygwizdow.png" alt="ulica wygwizdów">
+            </div>
+            <img data-ulica="ulbrojsce button mainmap" class="brojsce street" src="img/brojsce.png" alt="ulica brojsce">
+            <img class="cicha street" src="img/cicha.png" alt="ulica cicha">
+            <img class="debowa street" src="img/debowa.png" alt="ulica dębowa">
+            <img class="glowna street" src="img/glowna2.png" alt="ulica główna">
+            <img class="gorna street" src="img/gorna.png" alt="ulica górna">
+            <img class="krotka street" src="img/krotka.png" alt="ulica krótka">
+            <img class="lakowa street" src="img/lakowa.png" alt="ulica łąkowa">
+            <img class="lipowa street" src="img/lipowa.png" alt="ulica lipowa">
+            <img class="modrzewiowa street" src="img/modrzewiowa.png" alt="ulica modrzewiowa">
+            <img class="osiedle street" src="img/osiedle.png" alt="ulica osiedle młodych">
+            <img class="parcela street" src="img/parcela.png" alt="ulica parcela">
+            <img class="parkowa street" src="img/parkowa.png" alt="ulica parkowa">
+            <img class="pienki street" src="img/pienki.png" alt="ulica pieńki">
+            <img class="poludniowa street" src="img/poludniowa.png" alt="ulica poludniowa">
+            <img class="poprzeczna street" src="img/poprzeczna.png" alt="ulica poprzeczna">
+            <img class="prosta street" src="img/prosta.png" alt="ulica prosta">
+            <img class="sloneczna street" src="img/sloneczna.png" alt="ulica słoneczna">
+            <img class="spacerowa street" src="img/spacerowa.png" alt="ulica spacerowa">
+            <img class="spokojna street" src="img/spokojna.png" alt="ulica spokojna">
+            <img class="spoldzielcza street" src="img/spoldzielcza.png" alt="ulica spółdzielcza">
+            <img class="szkolna street" src="img/szkolna.png" alt="ulica szkolna">
+            <img class="topolowa street" src="img/topolowa.png" alt="ulica topolowa">
+            <img class="waska street" src="img/waska.png" alt="ulica wąska">
+            <img class="wschodnia street" src="img/wschodnia.png" alt="ulica wschodnia">
+            <img class="zielona street" src="img/zielona.png" alt="ulica zielona">
+            <i class="fas fa-church"></i>
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-school"></i>
+            <i class="fas fa-dollar-sign"></i>
+            <i class="fas fa-graduation-cap"></i>
+            <i class="fas fa-hospital-alt"></i>
+            <i class="fas fa-briefcase-medical"></i>
+            <i class="fas fa-glass-martini"></i>
+            <i class="fas fa-theater-masks"></i>
+            <i class="fas fa-car-side"></i>
+            <div class="directions">
+                <p>do Łasku</p>
+                <i class="fas fa-arrow-up"></i>
+                <p>do Zelowa</p>
+                <i class="fas fa-arrow-up"></i>
+                <p>do Szczercowa</p>
+                <i class="fas fa-arrow-up"></i>
+                <p>do Sędziejowic</p>
+                <i class="fas fa-arrow-up"></i>
+                <p>do Maleni</p>
+                <i class="fas fa-arrow-up"></i>
+                <p>do Brodni</p>
+                <i class="fas fa-arrow-up"></i>
+            </div>
+        </div>
+        </div>
+        <div class="buildings">
+            <p>Budynki</p>
+            <button class="chemistry button mainmap">Apteka</button>
+            <button class="bank button mainmap">Bank</button>
+            <button class="bar button mainmap">Bar</button>
+            <button class="church button mainmap">Kościół</button>
+            <button class="lpg button mainmap">LPG</button>
+            <button class="culture button mainmap">Ośr. Kultury</button>
+            <button class="hospital button mainmap">Ośr. Zdrowia</button>
+            <button class="post button mainmap">Poczta</button>
+            <button class="school button mainmap">Szkoła</button>
+            <button class="hall button mainmap">Urząd Gminy</button>
+            <div class="animation">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Przemysław Szadkowski</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(".church").click(function () {
+            $(".fa-church").toggleClass("visible2");
+            $(".church").toggleClass("green");
+        })
+        $(".post").click(function () {
+            $(".fa-envelope").toggleClass("visible2");
+            $(".post").toggleClass("green");
+        })
+        $(".hall").click(function () {
+            $(".fa-school").toggleClass("visible2");
+            $(".hall").toggleClass("green");
+        })
+        $(".bank").click(function () {
+            $(".fa-dollar-sign").toggleClass("visible2");
+            $(".bank").toggleClass("green");
+        })
+        $(".school").click(function () {
+            $(".fa-graduation-cap").toggleClass("visible2");
+            $(".school").toggleClass("green");
+        })
+        $(".hospital").click(function () {
+            $(".fa-hospital-alt").toggleClass("visible2");
+            $(".hospital").toggleClass("green");
+        })
+        $(".chemistry").click(function () {
+            $(".fa-briefcase-medical").toggleClass("visible2");
+            $(".chemistry").toggleClass("green");
+        })
+        $(".bar").click(function () {
+            $(".fa-glass-martini").toggleClass("visible2");
+            $(".bar").toggleClass("green");
+        })
+        $(".culture").click(function () {
+            $(".fa-theater-masks").toggleClass("visible2");
+            $(".culture").toggleClass("green");
+        })
+        $(".lpg").click(function () {
+            $(".fa-car-side").toggleClass("visible2");
+            $(".lpg").toggleClass("green");
+        })
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
