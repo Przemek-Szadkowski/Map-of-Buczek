@@ -11,17 +11,19 @@
 }
 
 body {
-    background-color: #81B93C;
+    background-color: #0C1E30;
     height: 100vh;
     width: 100%;
 }
+
+/* header */
 
 header {
     position: relative;
     width: 100%;
     height: 10vh;
     margin: 0 0 2vh 0;
-    background-color: #ddd;
+    background-color: #BC2026
 }
 
 header img {
@@ -32,6 +34,7 @@ header img {
     left: 10%;
     transform: translateY(-50%);
     padding: 0 10px;
+    background-color: #fff;
 }
 
 header h1 {
@@ -48,13 +51,15 @@ header h1 {
     letter-spacing: 4px;
 }
 
+/* animacja headera */
+
 header h1 span {
     display: inline-block;
     position: relative;
     transform: translateX(0);
     animation: hop .5s 1 linear;
     animation-fill-mode: both;
-    color: rgba(0, 0, 0, .7);
+    color: white;
 }
 
 header h1 span:nth-child(2) {
@@ -125,6 +130,8 @@ header h1 span:nth-child(18) {
     animation-delay: 1.6s;
 }
 
+/* mapa główna i część z szadkiem i wygwizdowem */
+
 div {
     float: left;
 }
@@ -147,6 +154,7 @@ div.north {
     z-index: 3;
     margin: 0 auto;
     transition: .5s;
+    z-index: 4;
 }
 
 div img.mapnorth {
@@ -155,9 +163,16 @@ div img.mapnorth {
     margin: 0 auto;
 }
 
+div img.mapnorth.top {
+    position: absolute;
+    z-index: 6;
+}
+
 .north.center {
     top: 0;
 }
+
+/* przyciski ulic */
 
 div.buttons button {
     float: left;
@@ -167,9 +182,10 @@ div.buttons button {
     line-height: 10px;
     cursor: pointer;
     transition: .3s;
-    box-shadow: 0 0 0 2px white;
+    box-shadow: 0 0 0 2px #F5EDCE;
     text-transform: uppercase;
     letter-spacing: 1px;
+    background-color: #64878B;
 }
 
 div.buttons p {
@@ -177,7 +193,7 @@ div.buttons p {
     font-size: 25px;
     text-transform: uppercase;
     padding: 20px;
-    color: black;
+    color: white;
     letter-spacing: 3px;
 }
 
@@ -186,19 +202,20 @@ div.buildings button {
     height: 25px;
     width: 75%;
     margin: 20px auto;
-    box-shadow: 0 0 0 2px white;
+    box-shadow: 0 0 0 2px #F5EDCE;
     cursor: pointer;
     transition: .3s;
     text-transform: uppercase;
     letter-spacing: 1px;
+    background-color: #64878B;
 }
 
 div.buttons button:hover {
-    background-color: rgba(281, 165, 32, .5);
+    background-color: #BC2026;
 }
 
 div.buildings button:hover {
-    background-color: rgba(281, 165, 32, .5);
+    background-color: #BC2026;
 }
 
 div.buildings p {
@@ -206,13 +223,15 @@ div.buildings p {
     font-size: 25px;
     text-transform: uppercase;
     padding: 20px 0;
-    color: black;
+    color: white;
     letter-spacing: 2px;
 }
 
 div.buttons {
     width: 30%;
 }
+
+/* przycisk czyszczący */
 
 div.buttons button.clear {
     float: none;
@@ -235,13 +254,14 @@ div.map {
     position: relative;
     overflow: hidden;
     width: 50%;
-    /* background-color: #81B93C; */
     z-index: -2;
 }
 
 div.buildings {
     width: 20%;
 }
+
+/* animacja truskawki */
 
 div.buildings div.animation {
     position: relative;
@@ -442,25 +462,28 @@ div.animation div:nth-child(19) {
     animation-delay: 4s;
 }
 
-/* ustawienia czerwonej ulicy - ważne!!!! */
+/* ustawienia czerwonych ulic - ważne!!!! */
+
 .brojsce {
     position: absolute;
-    top: 69.5%;
-    left: 91%;
+    top: 69.8%;
+    left: 90.8%;
     width: auto;
     height: 14.8%;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .cicha {
     position: absolute;
-    top: 77.8%;
-    left: 38.3%;
-    width: 7%;
+    top: 77.6%;
+    left: 39%;
+    width: 6.2%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .debowa {
@@ -469,18 +492,20 @@ div.animation div:nth-child(19) {
     left: 64.7%;
     width: 27%;
     height: auto;
-    z-index: 1;
-    opacity: 0;
+    z-index: 3;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .glowna {
     position: absolute;
     top: 0%;
-    left: 39.68%;
+    left: 39.6%;
     width: auto;
-    height: 91.5%;
-    z-index: 1;
-    opacity: 0;
+    height: 93.5%;
+    z-index: 3;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .gorna {
@@ -490,7 +515,8 @@ div.animation div:nth-child(19) {
     width: auto;
     height: 7.2%;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .krotka {
@@ -500,47 +526,63 @@ div.animation div:nth-child(19) {
     width: 10%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .lakowa {
     position: absolute;
-    top: 66%;
-    left: 1.65%;
-    width: 32%;
+    top: 66.1%;
+    left: 1.3%;
+    width: 33%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .modrzewiowa {
     position: absolute;
-    top: 24.4%;
+    top: 24.5%;
     left: 70.5%;
     width: auto;
-    height: 18.6%;
+    height: 18.9%;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
+}
+
+.lgow {
+    position: absolute;
+    top: 32.7%;
+    left: 70.7%;
+    width: auto;
+    height: 12%;
+    z-index: 1;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .lipowa {
     position: absolute;
     top: 74.8%;
-    left: 30%;
+    left: 30.2%;
     width: auto;
     height: 8.9%;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .osiedle {
     position: absolute;
-    top: 66.6%;
+    top: 66.9%;
     left: 44.7%;
-    width: 19.2%;
+    width: 18.8%;
     height: auto;
-    z-index: 1;
-    opacity: 0;
+    z-index: 2;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .parcela {
@@ -550,127 +592,140 @@ div.animation div:nth-child(19) {
     width: 17%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .parkowa {
     position: absolute;
-    top: 26.5%;
-    left: 42%;
+    top: 26.3%;
+    left: 42.2%;
     width: 13%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .pienki {
     position: absolute;
     top: 0%;
-    left: 46.5%;
-    width: 23%;
+    left: 46%;
+    width: 23.4%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .poludniowa {
     position: absolute;
-    top: 89%;
+    top: 88.8%;
     left: 47.4%;
-    width: 23%;
+    width: 23.4%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .poprzeczna {
     position: absolute;
-    top: 72.8%;
+    top: 72.7%;
     left: 35%;
     width: 9.6%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .prosta {
     position: absolute;
-    top: 52%;
+    top: 52.5%;
     left: 41.9%;
     width: 6.5%;
     height: 48%;
-    z-index: 1;
-    opacity: 0;
+    z-index: 2;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .sloneczna {
     position: absolute;
-    top: 74.8%;
-    left: 46.4%;
+    top: 74.6%;
+    left: 46.3%;
     width: 17.6%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .spacerowa {
     position: absolute;
     top: 36.2%;
     left: 53%;
-    width: 11%;
+    width: 11.2%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .spokojna {
     position: absolute;
     top: 46.5%;
-    left: 63.7%;
+    left: 63.8%;
     width: auto;
-    height: 19%;
+    height: 19.3%;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .spoldzielcza {
     position: absolute;
     top: 19.9%;
-    left: 44.1%;
+    left: 44.5%;
     width: 20.8%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .szkolna {
     position: absolute;
-    top: 50.4%;
-    left: 22.2%;
-    width: 20%;
+    top: 50.6%;
+    left: 21.8%;
+    width: 21%;
     height: auto;
-    z-index: 1;
-    opacity: 0;
+    z-index: 2;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .topolowa {
     position: absolute;
-    top: 33.5%;
+    top: 42.5%;
     left: 42.3%;
-    width: 57.6%;
+    width: 29%;
     height: auto;
-    z-index: 1;
-    opacity: 0;
+    z-index: 2;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .waska {
     position: absolute;
-    top: 38%;
-    left: 14%;
+    top: 38.1%;
+    left: 14.2%;
     width: 25.6%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .wschodnia {
@@ -680,7 +735,8 @@ div.animation div:nth-child(19) {
     width: auto;
     height: 21.2%;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .zielona {
@@ -690,41 +746,45 @@ div.animation div:nth-child(19) {
     width: 39.95%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .szadek {
     position: absolute;
-    top: 20.8%;
+    top: 20.3%;
     left: 0%;
-    width: 37.3%;
+    width: 37%;
     height: auto;
-    z-index: 1;
-    opacity: 0;
+    z-index: 5;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
 .wygwizdow {
     position: absolute;
-    top: 11.8%;
-    left: 33.8%;
-    width: 67%;
+    top: 11.5%;
+    left: 33.9%;
+    width: 67.7%;
     height: auto;
-    z-index: 1;
-    opacity: 0;
+    z-index: 5;
+    opacity: 1;
+    filter: grayscale(1) brightness(4);
 }
 
+/* klasy aktywne i ogólne */
+
 .red {
-    background-color: #f00;
+    background-color: #E13430;
     animation: blink 1s 1;
 }
 
-.green {
-    background-color: rgba(281, 165, 32, .5);
-    color: red;
+div button.green {
+    background-color: #E13430;
 }
 
 .visible {
-    opacity: 1;
+    filter: none;
     animation: blink 1s 1;
 }
 
@@ -734,9 +794,11 @@ div.animation div:nth-child(19) {
 }
 
 .visibleSz {
-    opacity: 1;
+    filter: none;
     animation: blink 1s .5s 1;
 }
+
+/* budynki na mapie głównej */
 
 div.map i {
     position: absolute;
@@ -797,6 +859,8 @@ div.map i.fa-car-side {
     top: 91%;
     left: 27.3%;
 }
+
+/* kierunki na mapie głównej */
 
 div.directions p {
     position: absolute;
@@ -878,10 +942,12 @@ div.directions i:nth-of-type(6) {
     transform: rotate(60deg);
 }
 
+/* stopka */
+
 footer {
     text-align: center;
     height: 4vh;
-    background-color: #ddd;
+    background-color: #BC2026;
     margin-top: 2vh;
     width: 100%;
 }
@@ -890,7 +956,10 @@ footer p {
     font-size: 15px;
     text-transform: uppercase;
     line-height: 4vh;
+    color: white;
 }
+
+/* animacje */
 
 @keyframes hop {
     0% {

@@ -14,6 +14,8 @@ const krotkast = document.querySelector(".ulkrotka");
 const ulicaK = document.querySelector(".krotka");
 const lakowast = document.querySelector(".ullakowa");
 const ulicaL = document.querySelector(".lakowa");
+const lgowst = document.querySelector(".ullgow");
+const ulicaLg = document.querySelector(".lgow");
 const modrzewiowast = document.querySelector(".ulmodrzewiowa");
 const ulicaM = document.querySelector(".modrzewiowa");
 const lipowast = document.querySelector(".ullipowa");
@@ -69,7 +71,7 @@ const streets = document.querySelectorAll(".street");
 const buildings = document.querySelectorAll("div.map i.fas");
 const mainStreets = document.querySelectorAll(".mainmap");
 
-//warunki dzialnia ulicy szadek i wygwizdow, by sie nie wylaczaly
+//warunki działania ulicy szadek i wygwizdów, by sie nie wyłączały
 
 szadekst.addEventListener("click", function () {
     if (centerPositionofWygwizdow == false) {
@@ -128,7 +130,7 @@ mainStreets.forEach(function (mainStreet) {
     })
 });
 
-// nasluchiwanie na button i ich dzialnie
+// nasluchiwanie na button i ich działanie
 
 glownast.addEventListener("click", function () {
     ulicaG.classList.toggle("visible");
@@ -138,7 +140,6 @@ brojscest.addEventListener("click", function () {
     ulicaB.classList.toggle("visible");
     brojscest.classList.toggle("green");
 });
-
 cichast.addEventListener("click", function () {
     ulicaC.classList.toggle("visible");
     cichast.classList.toggle("green");
@@ -158,6 +159,10 @@ krotkast.addEventListener("click", function () {
 lakowast.addEventListener("click", function () {
     ulicaL.classList.toggle("visible");
     lakowast.classList.toggle("green");
+});
+lgowst.addEventListener("click", function () {
+    ulicaLg.classList.toggle("visible");
+    lgowst.classList.toggle("green");
 });
 modrzewiowast.addEventListener("click", function () {
     ulicaM.classList.toggle("visible");
@@ -265,5 +270,5 @@ clearButton.addEventListener("click", function () {
 })
 
 
-// dodac kierunki i kierunek centrum Buczku na wjezdzajacych mapach
-// dodac responsywnosc
+// dodać kierunki i kierunek centrum Buczku na wjeżdzajacych mapach
+// dodać responsywność
