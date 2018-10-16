@@ -77,16 +77,20 @@ mainStreets.forEach(function (mainStreet) {
 buttons.forEach(function (button) {
     button.addEventListener("click", function () {
         document.querySelector('[data-ulica="' + this.className + '"]').classList.toggle("visible");
-        this.classList.toggle("green");
-    });
-})
+        if (this.getAttribute("id") != "green") {
+            this.setAttribute("id", "green");
+        } else {
+            this.removeAttribute("id", "green");
+        }
+    })
+});
 
 // dzialanie przycisku wyczyść
 
 clearButton.addEventListener("click", function () {
     // location.reload();
     for (let i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("green");
+        buttons[i].removeAttribute("id", "green");
     }
     for (let i = 0; i < streets.length; i++) {
         streets[i].classList.remove("visible");

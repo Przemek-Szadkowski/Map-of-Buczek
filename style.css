@@ -779,7 +779,7 @@ div.animation div:nth-child(19) {
     animation: blink 1s 1;
 }
 
-div button.green {
+div button#green {
     background-color: #E13430;
 }
 
