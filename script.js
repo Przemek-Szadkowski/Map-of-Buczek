@@ -1,10 +1,11 @@
 // zmienne dotyczace szadku i wygwizdowa na osobnych planszach
 
-const szadekst = document.querySelector(".ulszadek");
+const szadekSt = document.querySelector(".ulszadek");
 const ulicaSza = document.querySelector(".szadek");
-const wygwizdowst = document.querySelector(".ulwygwizdow");
+const wygwizdowSt = document.querySelector(".ulwygwizdow");
 const ulicaWyg = document.querySelector(".wygwizdow");
-const mapaszadek = document.querySelector(".north");
+const mapaSzadek = document.querySelector(".mapnorth");
+const streetsSzadek = document.querySelector(".mapnorth_top");
 var centerPositionofSzadek = false;
 var centerPositionofWygwizdow = false;
 
@@ -18,43 +19,45 @@ const mainStreets = document.querySelectorAll(".mainmap");
 
 //warunki działania ulicy szadek i wygwizdów, by sie nie wyłączały
 
-szadekst.addEventListener("click", function () {
+szadekSt.addEventListener("click", function () {
     if (centerPositionofWygwizdow == false) {
-        mapaszadek.classList.toggle("center");
+        mapaSzadek.classList.toggle("center");
+        streetsSzadek.classList.toggle("center");
         ulicaSza.classList.toggle("visibleSz");
-        szadekst.classList.toggle("green");
+        szadekSt.classList.toggle("green");
         if (centerPositionofSzadek == false) {
             centerPositionofSzadek = true;
         } else if (centerPositionofSzadek == true) {
             centerPositionofSzadek = false;
             ulicaSza.classList.remove("visibleSz");
-            szadekst.classList.remove("green");
-            wygwizdowst.classList.remove("green");
+            szadekSt.classList.remove("green");
+            wygwizdowSt.classList.remove("green");
             ulicaWyg.classList.remove("visibleSz");
         }
     } else if (centerPositionofWygwizdow == true) {
         ulicaSza.classList.toggle("visibleSz");
-        szadekst.classList.toggle("green");
+        szadekSt.classList.toggle("green");
     };
 });
 
-wygwizdowst.addEventListener("click", function () {
+wygwizdowSt.addEventListener("click", function () {
     if (centerPositionofSzadek == false) {
-        mapaszadek.classList.toggle("center");
-        wygwizdowst.classList.toggle("green");
+        mapaSzadek.classList.toggle("center");
+        streetsSzadek.classList.toggle("center");
+        wygwizdowSt.classList.toggle("green");
         ulicaWyg.classList.toggle("visibleSz");
         if (centerPositionofWygwizdow == false) {
             centerPositionofWygwizdow = true;
         } else if (centerPositionofWygwizdow == true) {
             centerPositionofWygwizdow = false;
-            wygwizdowst.classList.remove("green");
+            wygwizdowSt.classList.remove("green");
             ulicaWyg.classList.remove("visibleSz");
             ulicaSza.classList.remove("visibleSz");
-            szadekst.classList.remove("green");
+            szadekSt.classList.remove("green");
         }
     } else if (centerPositionofSzadek == true) {
         ulicaWyg.classList.toggle("visibleSz");
-        wygwizdowst.classList.toggle("green");
+        wygwizdowSt.classList.toggle("green");
     };
 });
 
@@ -62,17 +65,18 @@ wygwizdowst.addEventListener("click", function () {
 
 mainStreets.forEach(function (mainStreet) {
     mainStreet.addEventListener("click", function () {
-        mapaszadek.classList.remove("center");
-        wygwizdowst.classList.remove("green");
+        mapaSzadek.classList.remove("center");
+        streetsSzadek.classList.remove("center");
+        wygwizdowSt.classList.remove("green");
         ulicaWyg.classList.remove("visibleSz");
         ulicaSza.classList.remove("visibleSz");
-        szadekst.classList.remove("green");
+        szadekSt.classList.remove("green");
         centerPositionofSzadek = false;
         centerPositionofWygwizdow = false;
     })
 });
 
-// nasluchiwanie na buttony i ich działanie
+// nasłuchiwanie na buttony i ich działanie
 
 buttons.forEach(function (button) {
     button.addEventListener("click", function () {
@@ -88,9 +92,9 @@ buttons.forEach(function (button) {
 // dzialanie przycisku wyczyść
 
 clearButton.addEventListener("click", function () {
-    // location.reload();
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].removeAttribute("id", "green");
+        buttons[i].classList.remove("green");
     }
     for (let i = 0; i < streets.length; i++) {
         streets[i].classList.remove("visible");
@@ -100,10 +104,11 @@ clearButton.addEventListener("click", function () {
     }
     centerPositionofSzadek = false;
     centerPositionofWygwizdow = false;
-    mapaszadek.classList.remove("center");
+    mapaSzadek.classList.remove("center");
+    streetsSzadek.classList.remove("center");
     ulicaSza.classList.remove("visibleSz");
-    szadekst.classList.remove("green");
-    wygwizdowst.classList.remove("green");
+    szadekSt.classList.remove("green");
+    wygwizdowSt.classList.remove("green");
     ulicaWyg.classList.remove("visibleSz");
 })
 
@@ -111,3 +116,5 @@ clearButton.addEventListener("click", function () {
 // dodać kierunki i kierunek centrum Buczku na wjeżdzajacych mapach
 // dodać responsywność
 // zmienić jquery buttonów budynków na js
+
+// zrobić by przy włączonym szadku wygwizdow nie wjezdzał od góry i odwrotnie
