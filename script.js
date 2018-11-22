@@ -9,6 +9,9 @@ const streetsSzadek = document.querySelector(".mapnorth_top");
 var centerPositionofSzadek = false;
 var centerPositionofWygwizdow = false;
 
+const btnSzadek = document.querySelector("button.ulszadek");
+const btnWygwizdow = document.querySelector("button.ulwygwizdow");
+
 // zmienne funkcji wyczysc
 
 const clearButton = document.querySelector(".clear");
@@ -22,6 +25,8 @@ const mainStreets = document.querySelectorAll(".mainmap");
 szadekSt.addEventListener("click", function () {
     if (centerPositionofWygwizdow == false) {
         mapaSzadek.classList.toggle("center");
+        ulicaSza.classList.toggle("center");
+        ulicaWyg.classList.toggle("center");
         streetsSzadek.classList.toggle("center");
         ulicaSza.classList.toggle("visibleSz");
         szadekSt.classList.toggle("green");
@@ -33,6 +38,8 @@ szadekSt.addEventListener("click", function () {
             szadekSt.classList.remove("green");
             wygwizdowSt.classList.remove("green");
             ulicaWyg.classList.remove("visibleSz");
+            ulicaSza.classList.remove("center");
+            ulicaWyg.classList.remove("center");
         }
     } else if (centerPositionofWygwizdow == true) {
         ulicaSza.classList.toggle("visibleSz");
@@ -46,6 +53,8 @@ wygwizdowSt.addEventListener("click", function () {
         streetsSzadek.classList.toggle("center");
         wygwizdowSt.classList.toggle("green");
         ulicaWyg.classList.toggle("visibleSz");
+        ulicaSza.classList.toggle("center");
+        ulicaWyg.classList.toggle("center");
         if (centerPositionofWygwizdow == false) {
             centerPositionofWygwizdow = true;
         } else if (centerPositionofWygwizdow == true) {
@@ -54,6 +63,8 @@ wygwizdowSt.addEventListener("click", function () {
             ulicaWyg.classList.remove("visibleSz");
             ulicaSza.classList.remove("visibleSz");
             szadekSt.classList.remove("green");
+            ulicaSza.classList.remove("center");
+            ulicaWyg.classList.remove("center");
         }
     } else if (centerPositionofSzadek == true) {
         ulicaWyg.classList.toggle("visibleSz");
@@ -71,6 +82,8 @@ mainStreets.forEach(function (mainStreet) {
         ulicaWyg.classList.remove("visibleSz");
         ulicaSza.classList.remove("visibleSz");
         szadekSt.classList.remove("green");
+        ulicaSza.classList.remove("center");
+        ulicaWyg.classList.remove("center");
         centerPositionofSzadek = false;
         centerPositionofWygwizdow = false;
     })
@@ -110,6 +123,8 @@ clearButton.addEventListener("click", function () {
     szadekSt.classList.remove("green");
     wygwizdowSt.classList.remove("green");
     ulicaWyg.classList.remove("visibleSz");
+    ulicaSza.classList.remove("center");
+    ulicaWyg.classList.remove("center");
 })
 
 

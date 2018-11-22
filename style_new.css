@@ -531,6 +531,11 @@ div.map img.mapnorth_top.center {
     transition: .5s;
 }
 
+.szadek.center {
+    top: 20.3%;
+    left: 0%;
+}
+
 .szadek.visibleSz {
     position: absolute;
     top: 20.3%;
@@ -555,6 +560,11 @@ div.map img.mapnorth_top.center {
     transition: .5s;
 }
 
+.wygwizdow.center {
+    top: 11.5%;
+    left: 33.9%;
+}
+
 .wygwizdow.visibleSz {
     position: absolute;
     top: 11.5%;
@@ -575,6 +585,14 @@ div.map img.mapnorth_top.center {
 }
 
 div button#green {
+    background-color: #E13430;
+}
+
+div button.ulszadek.green {
+    background-color: #E13430;
+}
+
+div button.ulwygwizdow.green {
     background-color: #E13430;
 }
 
