@@ -6,3 +6,4 @@ Map with streets and main agencies of Buczek - little village in łódzkie voivo
 + HTML
 + CSS3
 + Javascript
++ JQuery
