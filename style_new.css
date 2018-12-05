@@ -672,15 +672,16 @@ div.buildings button:hover {
 }
 
 div.buildings button.clear {
-    background-color: #BC2026;
-    border: 2px solid #F5EDCE;
-    color: #F5EDCE;
+    background-color: #81B93C;
+    border: 1px solid #BC2026;
+    color: black;
+    line-height: 17px;
 }
 
 div.buildings button.clear:hover {
-    background-color: #64878B;
-    border: 2px solid #BC2026;
-    color: #F5EDCE;
+    background-color: #BC2026;
+    border: 1px solid #81B93C;
+    color: black
 }
 
 /* footer */
