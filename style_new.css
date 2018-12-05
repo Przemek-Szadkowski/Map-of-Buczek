@@ -9,7 +9,7 @@ body {
     background-color: #0C1E30;
     height: 100vh;
     width: 100%;
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -586,14 +586,17 @@ div.map img.mapnorth_top.center {
 
 div button#green {
     background-color: #E13430;
+    outline-color: transparent;
 }
 
 div button.ulszadek.green {
     background-color: #E13430;
+    outline-color: transparent;
 }
 
 div button.ulwygwizdow.green {
     background-color: #E13430;
+    outline-color: transparent;
 }
 
 div.buildings button.green {
