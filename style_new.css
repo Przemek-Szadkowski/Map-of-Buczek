@@ -40,7 +40,8 @@ header img {
     left: 10%;
     transform: translateY(-50%);
     padding: 0 10px;
-    background-color: #BC2026;
+    /* background-color: #BC2026; */
+    background-color: #D5C365;
 }
 
 header h1 {
@@ -50,7 +51,7 @@ header h1 {
     left: 30%;
     transform: translateY(-50%);
     padding: 20px 10px;
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     text-align: center;
     font-weight: 400;
@@ -161,8 +162,7 @@ div.buttons_left {
 div.buttons_left button {
     margin: 2% 0 2% -20px;
     flex-grow: 1;
-    width: 250px;
-    line-height: 15px;
+    width: 80%;
     border-top: none;
     cursor: pointer;
     transition: .3s;
@@ -172,6 +172,7 @@ div.buttons_left button {
     background-color: #D5C365;
     transform: skew(-45deg);
     border-color: #64878B;
+    font-size: .9rem;
 }
 
 div.buttons_left button:hover {
@@ -622,8 +623,7 @@ div.buttons_right {
 div.buttons_right button {
     margin: 2% -20px 2% 0;
     flex-grow: 1;
-    width: 250px;
-    line-height: 15px;
+    width: 80%;
     border-top: none;
     cursor: pointer;
     transition: .3s;
@@ -633,6 +633,7 @@ div.buttons_right button {
     background-color: #D5C365;
     transform: skew(45deg);
     border-color: #64878B;
+    font-size: .9rem;
 }
 
 div.buttons_right button:hover {
@@ -655,9 +656,8 @@ div.buildings {
 
 div.buildings button {
     margin: 5px 20px;
-    height: 18px;
+    height: 21%;
     width: 12%;
-    line-height: 15px;
     cursor: pointer;
     transition: .3s;
     text-transform: uppercase;
@@ -673,14 +673,13 @@ div.buildings button:hover {
 
 div.buildings button.clear {
     background-color: #81B93C;
-    border: 1px solid #BC2026;
+    border: 2px solid #BC2026;
     color: black;
-    line-height: 17px;
 }
 
 div.buildings button.clear:hover {
     background-color: #BC2026;
-    border: 1px solid #81B93C;
+    border: 2px solid #81B93C;
     color: black
 }
 

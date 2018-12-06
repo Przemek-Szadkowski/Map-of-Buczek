@@ -128,8 +128,5 @@ clearButton.addEventListener("click", function () {
 })
 
 
-// dodać kierunki i kierunek centrum Buczku na wjeżdzajacych mapach
 // dodać responsywność
 // zmienić jquery buttonów budynków na js
-
-// zrobić by przy włączonym szadku wygwizdow nie wjezdzał od góry i odwrotnie
